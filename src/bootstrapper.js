@@ -165,6 +165,7 @@ var Bootstrapper = ConstraintFsm.extend({
 					self.queues[qName].unsubscribe(ctag);
 				});
 				self.connection.end();
+        this.transition("uninitialized");
 			}
 		}
 	}
